@@ -36,6 +36,12 @@
       padding: 0.7rem;
     }
 
+    input:focus,
+    textarea:focus {
+      transform: scale(1);
+      transition: transform 0.2s ease-in-out;
+    }
+
     form textarea {
       resize: none;
     }
@@ -47,15 +53,10 @@
       margin-top: 1rem;
     }
 
-    input.invalid,
-    textarea.invalid {
-      border: 2px solid red;
-    }
-
     input:focus,
     textarea:focus {
       outline: none;
-      border: 2px solid blue;
+      transform: scale(1);
     }
   }
 }
@@ -94,5 +95,11 @@ footer {
   }
   .alert-success {
     color: green;
+  }
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .contact {
+    padding-bottom: 4rem;
   }
 }
