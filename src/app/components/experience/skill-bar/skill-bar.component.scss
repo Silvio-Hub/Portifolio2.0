@@ -1,0 +1,149 @@
+.skills {
+  text-align: center;
+  h3 {
+    font-size: var(--normal-font);
+    text-align: center;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 5rem;
+  }
+
+  .skills-box {
+    width: 49.5%;
+    height: 10rem;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      width: 35%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+
+  .skills-box:last-child .circleText {
+    bottom: 1rem;
+  }
+
+  .progressbar {
+    stroke: 10;
+    stroke: var(--bg-color);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animatebar 1s linear forwards;
+  }
+
+  .path {
+    stroke-width: 13;
+    stroke: var(--hover-color);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+  }
+
+  .path-1 {
+    animation: animatepath 2s 1s linear forwards;
+  }
+  .path-2 {
+    animation: animatepath2 1.5s 1s linear forwards;
+  }
+  .path-3 {
+    animation: animatepath3 2.5s 1s linear forwards;
+  }
+  .path-4 {
+    animation: animatepath4 3s 1s linear forwards;
+  }
+
+  .percentage {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+  }
+
+  .circleText {
+    width: auto;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -0.2rem;
+    transform: translateX(-50%);
+    font-size: 1.063rem;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+  }
+}
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .skills {
+    // margin: 0 auto;
+    &__main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .skills-box {
+      width: 33.3%;
+      padding-bottom: 2rem;
+      svg {
+        width: 50%;
+      }
+    }
+
+    .circleText {
+      font-size: 1rem;
+      //   bottom: -1rem;
+    }
+
+    .skills-box:last-child .circleText {
+      bottom: 3rem;
+    }
+  }
+}
+
+@keyframes animatebar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+@keyframes animatepath {
+  100% {
+    stroke-dashoffset: 75.3;
+  }
+}
+@keyframes animatepath2 {
+  100% {
+    stroke-dashoffset: 150.6;
+  }
+}
+@keyframes animatepath3 {
+  100% {
+    stroke-dashoffset: 100.4;
+  }
+}
+@keyframes animatepath4 {
+  100% {
+    stroke-dashoffset: 50.2;
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}

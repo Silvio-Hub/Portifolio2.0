@@ -1,0 +1,70 @@
+.u-button {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 45px;
+
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.6s;
+    box-shadow: var(--neon-box-shadow);
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid var(--hover-color);
+  }
+
+  a:hover {
+    color: var(--hover-color);
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: 0.4s;
+  }
+
+  a:hover::before {
+    width: 100%;
+  }
+
+  a:nth-child(2) {
+    background: var(--bg-color);
+    color: var(--hover-color);
+  }
+
+  a:nth-child(2):hover {
+    color: var(--bg-color);
+  }
+
+  a:nth-child(2)::before {
+    background: var(--hover-color);
+  }
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .u-button {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+}

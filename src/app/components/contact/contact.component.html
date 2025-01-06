@@ -1,0 +1,88 @@
+<section class="contact" id="contact">
+  <div class="contact__main">
+    <div class="contact__content-header">
+      <span>Dúvidas ou questões?</span>
+      <h2>Vamos conversar</h2>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="mesage-return">
+        <div *ngIf="successMessage" class="alert alert-success">
+          {{ successMessage }}
+        </div>
+
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+      </div>
+      <div
+        class="text-danger"
+        *ngIf="
+          contactForm.controls['name'].invalid &&
+          (contactForm.controls['name'].touched ||
+            contactForm.controls['name'].dirty)
+        "
+      >
+        <span *ngIf="contactForm.controls['name'].errors?.['required']"
+          >Campo obrigatório!</span
+        >
+      </div>
+      <input type="text" formControlName="name" placeholder="Seu nome:" />
+      <div
+        class="text-danger"
+        *ngIf="
+          contactForm.controls['email'].invalid &&
+          (contactForm.controls['email'].touched ||
+            contactForm.controls['email'].dirty)
+        "
+      >
+        <span *ngIf="contactForm.controls['email'].errors?.['required']"
+          >Campo obrigatório!</span
+        >
+        <span *ngIf="contactForm.controls['email'].errors?.['email']"
+          >Campo obrigatório!</span
+        >
+      </div>
+      <input type="email" formControlName="email" placeholder="Seu e-mail:" />
+      <input type="text" formControlName="phone" placeholder="Telefone:" />
+      <input type="text" formControlName="subject" placeholder="Assunto:" />
+
+      <div
+        class="text-danger"
+        *ngIf="
+          contactForm.controls['message'].invalid &&
+          (contactForm.controls['message'].touched ||
+            contactForm.controls['message'].dirty)
+        "
+      >
+        <span *ngIf="contactForm.controls['message'].errors?.['required']"
+          >Campo obrigatório!</span
+        >
+      </div>
+      <textarea
+        cols="30"
+        formControlName="message"
+        placeholder="Sua mensagem..."
+        rows="10"
+      ></textarea>
+      <div class="u-button">
+        <a
+          href="javascript:void(0);"
+          role="button"
+          type="submit"
+          class="u-button"
+          type="submit"
+          (click)="onSubmit()"
+          >Enviar mensagem</a
+        >
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer *ngIf="showFooter">
+  <p>Copyright &copy; 2025 by Silvio Celso</p>
+  <a href="" (click)="scrollToSection('persona')"
+    ><i class="bx bx-up-arrow-alt"></i
+  ></a>
+</footer>

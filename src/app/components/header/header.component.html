@@ -1,0 +1,29 @@
+<header>
+  <nav>
+    <div class="navbar">
+      <p class="navbar__logo">&lt; silvio<span>C</span>elso / &gt;</p>
+      <div class="navbar__navigate">
+        <ul class="navbar__links" [class.mobile-menu]="isMenuOpen">
+          <li (click)="closeMenu(); scrollToSection('persona')">
+            <a href="javascript:void(0);">Home</a>
+          </li>
+          <li (click)="closeMenu(); scrollToSection('about')">
+            <a href="javascript:void(0);">Sobre</a>
+          </li>
+          <li (click)="closeMenu(); scrollToSection('experience')">
+            <a href="javascript:void(0);">Experiência</a>
+          </li>
+          <li (click)="closeMenu(); scrollToSection('project')">
+            <a href="javascript:void(0);">Projetos</a>
+          </li>
+          <li (click)="closeMenu(); scrollToSection('contact')">
+            <a href="javascript:void(0);">Contato</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar__menu" (click)="toggleMenu()">
+        <i class="{{ menu_icon }}"></i>
+      </div>
+    </div>
+  </nav>
+</header>

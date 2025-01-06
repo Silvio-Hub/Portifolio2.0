@@ -1,0 +1,28 @@
+<section class="skills" id="experience">
+  <div class="skills__content">
+    <div class="skills__content-header">
+      <span>Experiencia técnica e profissional</span>
+      <h2>Minhas experiências</h2>
+    </div>
+
+    <div class="skills__content-main">
+      <div class="skills-left">
+        <h3>Experiência técnica</h3>
+
+        <div *ngFor="let skill of skillsBar" class="progress-bar">
+          <div class="info">
+            <p>{{ skill.name }}</p>
+            <p>{{ skill.percentage }}%</p>
+          </div>
+          <div class="roll">
+            <span [class]="skill.class"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="progress-bars-2">
+        <app-skill-bar></app-skill-bar>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,211 @@
+<section class="about" id="about">
+  <div class="about__body">
+    <div class="about__body-box">
+      <div class="about__box-content">
+        <div class="about__box-img">
+          <img src="img/img-my.png" alt="" />
+        </div>
+
+        <div class="about__box-blob">
+          <svg
+            viewBox="0 0 500 500"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="100%"
+            id="blobSvg"
+          >
+            <path fill="#12f7ff">
+              <animate
+                attributeName="d"
+                dur="20000ms"
+                repeatCount="indefinite"
+                values="
+                                M450,284.5Q462,319,444,348.5Q426,378,405.5,407Q385,436,354,455.5Q323,475,286.5,482Q250,489,214,480.5Q178,472,146,454.5Q114,437,84,415Q54,393,60,351.5Q66,310,57.5,280Q49,250,58,220.5Q67,191,83.5,166Q100,141,110.5,107Q121,73,147.5,45Q174,17,212,33.5Q250,50,284.5,43.5Q319,37,355,46.5Q391,56,415.5,84Q440,112,438.5,150.5Q437,189,437.5,219.5Q438,250,450,284.5Z;
+                                "
+              ></animate>
+            </path>
+          </svg>
+        </div>
+        <div class="about__box-blob">
+          <svg
+            viewBox="0 0 500 500"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="100%"
+            id="blobSvg"
+          >
+            <path fill="#12f7ff">
+              <animate
+                attributeName="d"
+                dur="20000ms"
+                repeatCount="indefinite"
+                values="
+                                M450,284.5Q462,319,444,348.5Q426,378,405.5,407Q385,436,354,455.5Q323,475,286.5,482Q250,489,214,480.5Q178,472,146,454.5Q114,437,84,415Q54,393,60,351.5Q66,310,57.5,280Q49,250,58,220.5Q67,191,83.5,166Q100,141,110.5,107Q121,73,147.5,45Q174,17,212,33.5Q250,50,284.5,43.5Q319,37,355,46.5Q391,56,415.5,84Q440,112,438.5,150.5Q437,189,437.5,219.5Q438,250,450,284.5Z;
+                                "
+              ></animate>
+            </path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="about__box-info">
+        <div class="about__box-info1">
+          <span>1+</span>
+          <p>Anos de experiência</p>
+        </div>
+        <div class="about__box-info2">
+          <span>2+</span>
+          <p>Anos de experiência</p>
+        </div>
+        <div class="about__box-info3">
+          <span>3+</span>
+          <p>Anos de experiência</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__content">
+      <span>breve apresentação</span>
+      <h2>Sobre mim</h2>
+      <h3>Minha trajetoria até aqui</h3>
+      <p>
+        Desenvolvedor front-end com mais de 3 anos de experiencia em criar
+        interfaces web, formado em sistema de informação, solido conhecimento em
+        Angular, além de uma boa base em HTML, CSS e TypeScript com histórico
+        comprovado em entregas de valor. Ao longa da minha carreira como
+        desenvolvedor trabalhei em ótimas equipes, contribui para o sucesso de
+        projetos desafiadores, focando no prazo e na qualidade da entrega assim
+        conseguindo bons feedbacks. Busco continuamente aprimorar minhas
+        habilidades e aplicar o meu conhecimento para impulsionar o
+        desenvolvimento front-end.
+      </p>
+
+      <div class="u-button">
+        <a
+          href="javascript:void(0);"
+          role="button"
+          (click)="openModal()"
+          class="btn"
+          >Saiba mais</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cards">
+  <div class="cards__group">
+    <div class="cards__group-card">
+      <div class="cards__group-icon">
+        <i class="bx bx-target-lock teste"></i>
+      </div>
+      <span>Objetivo</span>
+      <p>
+        Busco aprimorar minhas habilidades em desenvolvimento front-end,
+        especializando-me em frameworks modernos para criar experiências de
+        usuário inovadoras.
+      </p>
+    </div>
+    <div class="cards__group-card">
+      <div class="cards__group-icon">
+        <i class="bx bx-code-alt"></i>
+      </div>
+      <span>Aspiração</span>
+      <p>
+        Minha aspiração é garantir que cada projeto em que eu esteja envolvido
+        não apenas atenda aos requisitos, mas também se emphasisue pela
+        qualidade, usabilidade e experiência do usuário.
+      </p>
+    </div>
+    <div class="cards__group-card">
+      <div class="cards__group-icon">
+        <i class="bx bx-brain"></i>
+      </div>
+      <span>Filosofia</span>
+      <p>
+        Acredito na importância da simplicidade e legibilidade no código. Cada
+        linha de código deve ser clara e compreensível, não apenas para mim, mas
+        para toda a equipe.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div *ngIf="isOpenModal" class="modal-overlay">
+    <div class="modal-content" #modalContent>
+      <span class="close-icon" (click)="closeModal()">
+        <i class="bx bx-x"></i>
+      </span>
+      <h2>Detalhes Adicionais</h2>
+      <h4>Habilidades Técnicas</h4>
+      <div class="ability">
+        <span class="emphasis">Front-End:</span>
+        <p>HTML, CSS, JavaScript, Angular (12+)</p>
+      </div>
+      <div class="ability">
+        <span class="emphasis">Ferramentas:</span>
+        <p>Jira, Confluence, Bootstrap, Karma, Jasmine</p>
+      </div>
+      <div class="ability">
+        <span class="emphasis">Metodologias:</span>
+        <p>Testes Unitários, Integração Contínua, Agile/Scrum</p>
+      </div>
+      <div>
+        <h4>Educação</h4>
+        <p>
+          <span class="emphasis">Bacharelado em Sistemas de Informação</span>
+          — Universidade Cruzeiro do Sul (Concluído)
+        </p>
+        <p>
+          <span class="emphasis">Pós Graduação em Front-end engineering</span>
+          — FIAP (Início Maio 2025)
+        </p>
+      </div>
+      <div>
+        <h4>Certificações e Cursos</h4>
+        <p>
+          <span class="emphasis"
+            >Angular 9 + Spring Boot 2.2: Fullstack Development Avançado</span
+          >
+          — Udemy
+        </p>
+        <p>
+          <span class="emphasis">Angular: Do Zero ao Profissional</span>
+          — Desenvolvedor.io
+        </p>
+        <p>
+          <span class="emphasis">Algoritmos e Lógica de Programação</span>
+          — Alura/DIO
+        </p>
+        <p>
+          <span class="emphasis">ReactJS, Java e Spring Boot</span>
+          — Rocketseat (Em andamento, 2025)
+        </p>
+      </div>
+      <div>
+        <h4>Projetos Destacados</h4>
+        <span class="emphasis">Portal de Clientes Santander</span>
+        <p>
+          Desenvolvi funcionalidades do portal utilizando Angular, otimizando a
+          experiência do usuário e reduzindo o tempo de carregamento
+        </p>
+      </div>
+      <div>
+        <h4>Objetivos Futuros</h4>
+        <p>
+          Estou em constante busca pelo aprimoramento das minhas habilidades, e
+          para isso, estou iniciando uma pós-graduação em Front-end engineering,
+          onde irei me aprofundar em novas tecnologias, metodologias e melhores
+          práticas para o desenvolvimento de interfaces de alta performance. Meu
+          objetivo é expandir meus conhecimentos em frameworks como React e
+          Vue.js, além de explorar conceitos avançados de arquitetura de
+          sistemas. Busco contribuir para o desenvolvimento de soluções
+          interativas, escaláveis e que proporcionem uma experiência de usuário
+          excepcional, alinhando inovação e qualidade em todos os projetos que
+          me envolver.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

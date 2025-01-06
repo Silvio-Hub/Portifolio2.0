@@ -1,0 +1,19 @@
+<section class="skills">
+  <h3>Experiência profissional</h3>
+  <div class="skills__main">
+    <div *ngFor="let skill of skillsBar" class="skills-box">
+      <svg x="0px" y="0px" viewBox="0 0 200 200">
+        <circle class="progressbar" cx="100" cy="100" r="80"></circle>
+        <circle
+          [ngClass]="'path ' + skill.pathClass"
+          [attr.stroke-dashoffset]="502 - (502 * skill.percentage) / 100"
+          cx="100"
+          cy="100"
+          r="80"
+        ></circle>
+      </svg>
+      <div class="percentage">{{ skill.percentage }}%</div>
+      <div class="circleText">{{ skill.name }}</div>
+    </div>
+  </div>
+</section>
