@@ -27,8 +27,6 @@ export class PersonaComponent {
     window.open(urlWhatsApp, '_blank');
   }
 
-  // ____________________________________
-
   @ViewChild('modalContent', { static: false }) modalContent!: ElementRef;
   isOpenModal: boolean = false;
 

@@ -171,6 +171,7 @@
         font-size: var(--big-font);
         font-weight: 600;
         span {
+          font-size: 2rem;
           font-weight: 200;
           display: block;
         }
@@ -183,6 +184,7 @@
 
     &__content-profession {
       margin-left: 0;
+      font-size: 1.5rem;
     }
 
     &__content {
