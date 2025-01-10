@@ -6,16 +6,17 @@
 
   <div class="project__container">
     <div class="filter">
-      <button class="filter-button" (click)="setCategory('All')">All</button>
-      <button class="filter-button" (click)="setCategory('Produto')">
-        Produto
+      <button class="filter-button" (click)="setCategory('All')">Todos</button>
+      <button class="filter-button" (click)="setCategory('Angular')">
+        Angular
       </button>
-      <button class="filter-button" (click)="setCategory('Interação')">
-        Interação
+      <button class="filter-button" (click)="setCategory('ReactJS')">
+        ReactJS
       </button>
-      <button class="filter-button" (click)="setCategory('Aplicação Web')">
-        Aplicação Web
+      <button class="filter-button" (click)="setCategory('Node-js')">
+        Node-js
       </button>
+      <button class="filter-button" (click)="setCategory('Java')">Java</button>
     </div>
 
     <div class="gallery">
@@ -27,6 +28,7 @@
         <div class="box-text">
           <h3>{{ project.title }}</h3>
           <p>{{ project.description }}</p>
+          <p>{{ project.technologies }}</p>
           <a [href]="project.link" target="_blank"
             ><i class="bx bx-link-external"></i
           ></a>
